@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import NavigationBar from './components/NavigationBar.vue'
 
 </script>
     
   <template>
-    <div class="logo">
+    <div class="parent">
+      <NavigationBar/>
       <HelloWorld/>
+
     </div>
   </template>
 
@@ -21,5 +24,12 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.parent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 </style>
