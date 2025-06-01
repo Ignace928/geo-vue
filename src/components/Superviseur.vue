@@ -1,6 +1,6 @@
 <script setup>
     import {ref} from "vue"
-    import GeoMap from "./GeoMap.vue"
+    import StalkVue from "./Stalk.vue"
 
 
     const confirm = ref(false)
@@ -16,7 +16,7 @@
         superUser.value.motDePasse=""
     }
     const stalk = () =>{
-        if(superUser.value.nom === 'edwardo' && superUser.value.motDePasse === "ed2316"){
+        if(superUser.value.nom === 'ed' && superUser.value.motDePasse === "e"){
             tooglers()
         }
         else {
@@ -33,7 +33,7 @@
         <div id="superviseur" v-if="confirm">
             <p>Localisation en cours avec leaflet</p>
             <button @click="tooglers">Leave</button>
-            <GeoMap/>
+            <StalkVue/>
         </div>
 
         <div v-else>
